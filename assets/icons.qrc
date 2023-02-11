@@ -1,0 +1,9 @@
+<RCC>
+  <qresource>
+    <file>unchecked-radio-button-on-96.png</file>
+    <file>toggle-on-80.png</file>
+    <file>joystick-500.png</file>
+    <file>toggle-off-80.png</file>
+    <file>unchecked-radio-button-off-96.png</file>
+  </qresource>
+</RCC>
