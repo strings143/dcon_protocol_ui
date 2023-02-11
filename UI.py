@@ -19,6 +19,8 @@ class Ui_Form(object):
         Form.setMouseTracking(False)
         Form.setTabletTracking(False)
         Form.setAutoFillBackground(False)
+        self.centralwidget = QtWidgets.QWidget(Form)
+        Form.setWindowFlags(QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowCloseButtonHint | QtCore.Qt.WindowStaysOnTopHint)
         Form.setStyleSheet("background-color:rgb(233, 236, 255)")
         self.widget_0 = QtWidgets.QWidget(Form)
         self.widget_0.setGeometry(QtCore.QRect(1250, 100, 121, 71))
@@ -303,7 +305,7 @@ class Ui_Form(object):
         self.widget_Dashboard_5.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_5.setObjectName("widget_Dashboard_5")
         self.comportbox = QtWidgets.QComboBox(Form)
-        self.comportbox.setGeometry(QtCore.QRect(320, 30, 111, 31))
+        self.comportbox.setGeometry(QtCore.QRect(380, 30, 111, 31))
         font = QtGui.QFont()
         font.setFamily("Arial Black")
         font.setPointSize(12)
@@ -311,16 +313,25 @@ class Ui_Form(object):
         font.setWeight(75)
         self.comportbox.setFont(font)
         self.comportbox.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
-        self.comportbox.setStyleSheet("background-color:rgb(182, 171, 193);\n""padding-left:10px")
+        #self.comportbox.setStyleSheet("background-color:rgb(182, 171, 193);\n""padding-left:10px;\n""selection-background-color:rgb(182, 171, 193);\n")
+        self.comportbox.setStyleSheet('''
+                QComboBox{
+                        background-color:rgb(182, 171, 193);
+                        padding-left:10px;
+                        selection-background-color:rgb(182, 171, 193);
+                } 
+               
+        '''
+        )
         self.comportbox.setObjectName("comportbox")
         self.text = QtWidgets.QLabel(Form)
-        self.text.setGeometry(QtCore.QRect(20, 30, 291, 31))
+        self.text.setGeometry(QtCore.QRect(20, 30,355, 31))
         self.text.setStyleSheet("color: rgb(85, 85, 127);\n"
 "font: 75 22pt \"Berlin Sans FB Demi\";\n"
 "")
         self.text.setObjectName("text")
         self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(440, 30, 61, 31))
+        self.pushButton.setGeometry(QtCore.QRect(500, 30, 61, 31))
         font = QtGui.QFont()
         font.setFamily("Arial Black")
         font.setPointSize(12)

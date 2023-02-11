@@ -11,6 +11,7 @@ import serial.tools.list_ports
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import pyqtSlot
 
+
 BAUD_RATES = 9600 
 choices = []
 
