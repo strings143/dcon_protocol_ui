@@ -14,280 +14,192 @@ from analoggaugewidget import AnalogGaugeWidget
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(1444, 863)
+        Form.resize(1601, 894)
         Form.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         Form.setMouseTracking(False)
         Form.setTabletTracking(False)
         Form.setAutoFillBackground(False)
+        self.centralwidget = QtWidgets.QWidget(Form)
+        Form.setWindowFlags(QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowCloseButtonHint | QtCore.Qt.WindowStaysOnTopHint)
         Form.setStyleSheet("background-color: rgb(0, 0, 0);\n"
 "")
-        self.widget_0 = QtWidgets.QWidget(Form)
-        self.widget_0.setGeometry(QtCore.QRect(1270, 70, 121, 71))
-        self.widget_0.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/unchecked-radio-button-off-96.png);")
-        self.widget_0.setObjectName("widget_0")
-        self.widget_1 = QtWidgets.QWidget(Form)
-        self.widget_1.setGeometry(QtCore.QRect(1120, 70, 121, 71))
-        self.widget_1.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/unchecked-radio-button-off-96.png);")
-        self.widget_1.setObjectName("widget_1")
-        self.widget_2 = QtWidgets.QWidget(Form)
-        self.widget_2.setGeometry(QtCore.QRect(970, 70, 121, 71))
-        self.widget_2.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/unchecked-radio-button-off-96.png);")
-        self.widget_2.setObjectName("widget_2")
-        self.widget_3 = QtWidgets.QWidget(Form)
-        self.widget_3.setGeometry(QtCore.QRect(160, 330, 121, 71))
-        self.widget_3.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/unchecked-radio-button-off-96.png);")
-        self.widget_3.setObjectName("widget_3")
-        self.widget_4 = QtWidgets.QWidget(Form)
-        self.widget_4.setGeometry(QtCore.QRect(20, 330, 111, 71))
-        self.widget_4.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/unchecked-radio-button-off-96.png);")
-        self.widget_4.setObjectName("widget_4")
-        self.widget_5 = QtWidgets.QWidget(Form)
-        self.widget_5.setGeometry(QtCore.QRect(0, 510, 131, 61))
-        self.widget_5.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/toggle-off-80.png);")
-        self.widget_5.setObjectName("widget_5")
-        self.widget_7 = QtWidgets.QWidget(Form)
-        self.widget_7.setGeometry(QtCore.QRect(0, 620, 131, 61))
-        self.widget_7.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/toggle-off-80.png);")
-        self.widget_7.setObjectName("widget_7")
-        self.widget_8 = QtWidgets.QWidget(Form)
-        self.widget_8.setGeometry(QtCore.QRect(0, 680, 131, 61))
-        self.widget_8.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/toggle-off-80.png);")
-        self.widget_8.setObjectName("widget_8")
-        self.widget_9 = QtWidgets.QWidget(Form)
-        self.widget_9.setGeometry(QtCore.QRect(150, 620, 131, 61))
-        self.widget_9.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/toggle-off-80.png);")
-        self.widget_9.setObjectName("widget_9")
-        self.widget_10 = QtWidgets.QWidget(Form)
-        self.widget_10.setGeometry(QtCore.QRect(150, 680, 131, 61))
-        self.widget_10.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/toggle-off-80.png);")
-        self.widget_10.setObjectName("widget_10")
-        self.widget_11 = QtWidgets.QWidget(Form)
-        self.widget_11.setGeometry(QtCore.QRect(670, 510, 111, 61))
-        self.widget_11.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/toggle-off-80.png);")
-        self.widget_11.setObjectName("widget_11")
-        self.widget_12 = QtWidgets.QWidget(Form)
-        self.widget_12.setGeometry(QtCore.QRect(670, 570, 111, 61))
-        self.widget_12.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/toggle-off-80.png);")
-        self.widget_12.setObjectName("widget_12")
-        self.widget_13 = QtWidgets.QWidget(Form)
-        self.widget_13.setGeometry(QtCore.QRect(150, 510, 131, 61))
-        self.widget_13.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/toggle-off-80.png);")
-        self.widget_13.setObjectName("widget_13")
-        self.widget_14 = QtWidgets.QWidget(Form)
-        self.widget_14.setGeometry(QtCore.QRect(150, 450, 131, 61))
-        self.widget_14.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/toggle-off-80.png);")
-        self.widget_14.setObjectName("widget_14")
-        self.widget_15 = QtWidgets.QWidget(Form)
-        self.widget_15.setGeometry(QtCore.QRect(340, 320, 101, 61))
-        self.widget_15.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/toggle-off-80.png);")
-        self.widget_15.setObjectName("widget_15")
         self.lcdNumber_0 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_0.setGeometry(QtCore.QRect(1220, 190, 150, 31))
+        self.lcdNumber_0.setGeometry(QtCore.QRect(1400, 210, 150, 31))
         self.lcdNumber_0.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_0.setObjectName("lcdNumber_0")
         self.lcdNumber_1 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_1.setGeometry(QtCore.QRect(1000, 190, 150, 31))
+        self.lcdNumber_1.setGeometry(QtCore.QRect(1180, 210, 150, 31))
         self.lcdNumber_1.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_1.setObjectName("lcdNumber_1")
         self.lcdNumber_2 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_2.setGeometry(QtCore.QRect(800, 350, 150, 31))
+        self.lcdNumber_2.setGeometry(QtCore.QRect(970, 370, 150, 31))
         self.lcdNumber_2.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_2.setObjectName("lcdNumber_2")
         self.lcdNumber_3 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_3.setGeometry(QtCore.QRect(800, 570, 150, 31))
+        self.lcdNumber_3.setGeometry(QtCore.QRect(970, 590, 150, 31))
         self.lcdNumber_3.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_3.setObjectName("lcdNumber_3")
         self.lcdNumber_4 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_4.setGeometry(QtCore.QRect(1000, 630, 150, 31))
+        self.lcdNumber_4.setGeometry(QtCore.QRect(1190, 680, 150, 31))
         self.lcdNumber_4.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_4.setObjectName("lcdNumber_4")
         self.lcdNumber_5 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_5.setGeometry(QtCore.QRect(1230, 630, 150, 31))
+        self.lcdNumber_5.setGeometry(QtCore.QRect(1410, 680, 150, 31))
         self.lcdNumber_5.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_5.setObjectName("lcdNumber_5")
         self.lcdNumber_6 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_6.setGeometry(QtCore.QRect(410, 100, 150, 31))
+        self.lcdNumber_6.setGeometry(QtCore.QRect(470, 100, 150, 31))
         self.lcdNumber_6.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_6.setObjectName("lcdNumber_6")
         self.lcdNumber_7 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_7.setGeometry(QtCore.QRect(210, 100, 150, 31))
+        self.lcdNumber_7.setGeometry(QtCore.QRect(250, 100, 150, 31))
         self.lcdNumber_7.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_7.setObjectName("lcdNumber_7")
         self.lcdNumber_8 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_8.setGeometry(QtCore.QRect(500, 400, 150, 31))
+        self.lcdNumber_8.setGeometry(QtCore.QRect(600, 340, 150, 31))
         self.lcdNumber_8.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_8.setObjectName("lcdNumber_8")
         self.lcdNumber_9 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_9.setGeometry(QtCore.QRect(500, 620, 150, 31))
+        self.lcdNumber_9.setGeometry(QtCore.QRect(600, 560, 150, 31))
         self.lcdNumber_9.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_9.setObjectName("lcdNumber_9")
         self.lcdNumber_10 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_10.setGeometry(QtCore.QRect(20, 100, 150, 31))
+        self.lcdNumber_10.setGeometry(QtCore.QRect(30, 100, 150, 31))
         self.lcdNumber_10.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_10.setObjectName("lcdNumber_10")
         self.lcdNumber_11 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_11.setGeometry(QtCore.QRect(320, 400, 150, 31))
+        self.lcdNumber_11.setGeometry(QtCore.QRect(410, 460, 150, 31))
         self.lcdNumber_11.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_11.setObjectName("lcdNumber_11")
         self.lcdNumber_12 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_12.setGeometry(QtCore.QRect(320, 620, 150, 31))
+        self.lcdNumber_12.setGeometry(QtCore.QRect(410, 680, 150, 31))
         self.lcdNumber_12.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_12.setObjectName("lcdNumber_12")
         self.lcdNumber_13 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_13.setGeometry(QtCore.QRect(1120, 570, 150, 31))
+        self.lcdNumber_13.setGeometry(QtCore.QRect(1290, 590, 150, 31))
         self.lcdNumber_13.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_13.setObjectName("lcdNumber_13")
         self.lcdNumber_14 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_14.setGeometry(QtCore.QRect(1260, 500, 150, 31))
+        self.lcdNumber_14.setGeometry(QtCore.QRect(1430, 520, 150, 31))
         self.lcdNumber_14.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_14.setObjectName("lcdNumber_14")
-        self.widget_16 = QtWidgets.QWidget(Form)
-        self.widget_16.setGeometry(QtCore.QRect(830, 70, 111, 71))
-        self.widget_16.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/unchecked-radio-button-off-96.png);")
-        self.widget_16.setObjectName("widget_16")
-        self.widget_17 = QtWidgets.QWidget(Form)
-        self.widget_17.setGeometry(QtCore.QRect(690, 70, 111, 71))
-        self.widget_17.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/unchecked-radio-button-off-96.png);")
-        self.widget_17.setObjectName("widget_17")
         self.widget = QtWidgets.QWidget(Form)
-        self.widget.setGeometry(QtCore.QRect(1150, 490, 91, 61))
+        self.widget.setGeometry(QtCore.QRect(1320, 510, 91, 61))
         self.widget.setStyleSheet("image: url(:/joystick-500.png);")
         self.widget.setObjectName("widget")
         self.lcdNumber_15 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_15.setGeometry(QtCore.QRect(970, 500, 150, 31))
+        self.lcdNumber_15.setGeometry(QtCore.QRect(1140, 520, 150, 31))
         self.lcdNumber_15.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_15.setObjectName("lcdNumber_15")
         self.lcdNumber_16 = QtWidgets.QLCDNumber(Form)
-        self.lcdNumber_16.setGeometry(QtCore.QRect(1120, 440, 150, 31))
+        self.lcdNumber_16.setGeometry(QtCore.QRect(1290, 460, 150, 31))
         self.lcdNumber_16.setStyleSheet("background-color:rgb(90, 90, 138);\n"
 "border-radius: 10px;\n"
 "border : 1.5px solid rgb(126, 222, 234);\n"
 "color: rgb(126, 222, 234);")
         self.lcdNumber_16.setObjectName("lcdNumber_16")
-        self.widget_6 = QtWidgets.QWidget(Form)
-        self.widget_6.setGeometry(QtCore.QRect(0, 450, 131, 61))
-        self.widget_6.setStyleSheet("border-radius: 10px;\n"
-"image: url(:/toggle-off-80.png);")
-        self.widget_6.setObjectName("widget_6")
         self.widget_Dashboard_10 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_10.setGeometry(QtCore.QRect(20, 140, 150, 150))
+        self.widget_Dashboard_10.setGeometry(QtCore.QRect(30, 140, 150, 150))
         self.widget_Dashboard_10.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_10.setObjectName("widget_Dashboard_10")
         self.widget_Dashboard_7 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_7.setGeometry(QtCore.QRect(210, 140, 150, 150))
+        self.widget_Dashboard_7.setGeometry(QtCore.QRect(250, 140, 150, 150))
         self.widget_Dashboard_7.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_7.setObjectName("widget_Dashboard_7")
         self.widget_Dashboard_6 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_6.setGeometry(QtCore.QRect(410, 140, 150, 150))
+        self.widget_Dashboard_6.setGeometry(QtCore.QRect(470, 140, 150, 150))
         self.widget_Dashboard_6.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_6.setObjectName("widget_Dashboard_6")
         self.widget_Dashboard_11 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_11.setGeometry(QtCore.QRect(320, 440, 150, 150))
+        self.widget_Dashboard_11.setGeometry(QtCore.QRect(410, 500, 150, 150))
         self.widget_Dashboard_11.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_11.setObjectName("widget_Dashboard_11")
         self.widget_Dashboard_12 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_12.setGeometry(QtCore.QRect(320, 660, 150, 150))
+        self.widget_Dashboard_12.setGeometry(QtCore.QRect(410, 720, 150, 150))
         self.widget_Dashboard_12.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_12.setObjectName("widget_Dashboard_12")
         self.widget_Dashboard_8 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_8.setGeometry(QtCore.QRect(500, 440, 150, 150))
+        self.widget_Dashboard_8.setGeometry(QtCore.QRect(600, 380, 150, 150))
         self.widget_Dashboard_8.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_8.setObjectName("widget_Dashboard_8")
         self.widget_Dashboard_9 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_9.setGeometry(QtCore.QRect(500, 660, 150, 150))
+        self.widget_Dashboard_9.setGeometry(QtCore.QRect(600, 600, 150, 150))
         self.widget_Dashboard_9.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_9.setObjectName("widget_Dashboard_9")
         self.widget_Dashboard_1 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_1.setGeometry(QtCore.QRect(1000, 230, 150, 150))
+        self.widget_Dashboard_1.setGeometry(QtCore.QRect(1180, 250, 150, 150))
         self.widget_Dashboard_1.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_1.setObjectName("widget_Dashboard_1")
         self.widget_Dashboard_0 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_0.setGeometry(QtCore.QRect(1220, 230, 150, 150))
+        self.widget_Dashboard_0.setGeometry(QtCore.QRect(1400, 250, 150, 150))
         self.widget_Dashboard_0.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_0.setObjectName("widget_Dashboard_0")
         self.widget_Dashboard_2 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_2.setGeometry(QtCore.QRect(800, 390, 150, 150))
+        self.widget_Dashboard_2.setGeometry(QtCore.QRect(970, 410, 150, 150))
         self.widget_Dashboard_2.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_2.setObjectName("widget_Dashboard_2")
         self.widget_Dashboard_3 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_3.setGeometry(QtCore.QRect(800, 610, 150, 150))
+        self.widget_Dashboard_3.setGeometry(QtCore.QRect(970, 630, 150, 150))
         self.widget_Dashboard_3.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_3.setObjectName("widget_Dashboard_3")
         self.widget_Dashboard_4 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_4.setGeometry(QtCore.QRect(1000, 670, 150, 150))
+        self.widget_Dashboard_4.setGeometry(QtCore.QRect(1190, 720, 150, 150))
         self.widget_Dashboard_4.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_4.setObjectName("widget_Dashboard_4")
         self.widget_Dashboard_5 = AnalogGaugeWidget(Form)
-        self.widget_Dashboard_5.setGeometry(QtCore.QRect(1230, 670, 150, 150))
+        self.widget_Dashboard_5.setGeometry(QtCore.QRect(1410, 720, 150, 150))
         self.widget_Dashboard_5.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_5.setObjectName("widget_Dashboard_5")
         self.comportbox = QtWidgets.QComboBox(Form)
-        self.comportbox.setGeometry(QtCore.QRect(480, 30, 111, 31))
+        self.comportbox.setGeometry(QtCore.QRect(390, 30, 111, 31))  
         font = QtGui.QFont()
         font.setFamily("Arial Black")
         font.setPointSize(12)
@@ -295,16 +207,24 @@ class Ui_Form(object):
         font.setWeight(75)
         self.comportbox.setFont(font)
         self.comportbox.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
-        self.comportbox.setStyleSheet("background-color:rgb(182, 171, 193)")
+        self.comportbox.setStyleSheet('''
+                        QComboBox{
+                                background-color:rgb(182, 171, 193);
+                                padding-left:10px;
+                                selection-background-color:rgb(182, 171, 193);
+                        } 
+                
+                '''
+                )
         self.comportbox.setObjectName("comportbox")
         self.text = QtWidgets.QLabel(Form)
-        self.text.setGeometry(QtCore.QRect(20, 30, 421, 31))
+        self.text.setGeometry(QtCore.QRect(20, 30, 361, 31))
         self.text.setStyleSheet("color: rgb(126, 222, 234);\n"
 "font: 75 22pt \"Berlin Sans FB Demi\";\n"
 "")
         self.text.setObjectName("text")
         self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(600, 30, 61, 31))
+        self.pushButton.setGeometry(QtCore.QRect(520, 30, 61, 31))
         font = QtGui.QFont()
         font.setFamily("Arial Black")
         font.setPointSize(12)
@@ -315,76 +235,207 @@ class Ui_Form(object):
 "")
         self.pushButton.setObjectName("pushButton")
         self.widget_back_0 = QtWidgets.QWidget(Form)
-        self.widget_back_0.setGeometry(QtCore.QRect(10, 80, 561, 221))
+        self.widget_back_0.setGeometry(QtCore.QRect(20, 80, 171, 221))
         self.widget_back_0.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_0.setObjectName("widget_back_0")
         self.widget_back_1 = QtWidgets.QWidget(Form)
-        self.widget_back_1.setGeometry(QtCore.QRect(670, 60, 741, 91))
+        self.widget_back_1.setGeometry(QtCore.QRect(940, 80, 91, 91))
         self.widget_back_1.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_1.setObjectName("widget_back_1")
+        self.widget_17 = QtWidgets.QWidget(self.widget_back_1)
+        self.widget_17.setGeometry(QtCore.QRect(-10, 10, 111, 71))
+        self.widget_17.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/unchecked-radio-button-off-96.png);")
+        self.widget_17.setObjectName("widget_17")
         self.widget_back_2 = QtWidgets.QWidget(Form)
-        self.widget_back_2.setGeometry(QtCore.QRect(10, 320, 131, 91))
+        self.widget_back_2.setGeometry(QtCore.QRect(50, 320, 91, 91))
         self.widget_back_2.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_2.setObjectName("widget_back_2")
+        self.widget_4 = QtWidgets.QWidget(self.widget_back_2)
+        self.widget_4.setGeometry(QtCore.QRect(10, 10, 71, 71))
+        self.widget_4.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/unchecked-radio-button-off-96.png);")
+        self.widget_4.setObjectName("widget_4")
         self.widget_back_3 = QtWidgets.QWidget(Form)
-        self.widget_back_3.setGeometry(QtCore.QRect(310, 390, 171, 211))
+        self.widget_back_3.setGeometry(QtCore.QRect(400, 450, 171, 211))
         self.widget_back_3.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_3.setObjectName("widget_back_3")
         self.widget_back_4 = QtWidgets.QWidget(Form)
-        self.widget_back_4.setGeometry(QtCore.QRect(310, 610, 171, 211))
+        self.widget_back_4.setGeometry(QtCore.QRect(400, 670, 171, 211))
         self.widget_back_4.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_4.setObjectName("widget_back_4")
         self.widget_back_5 = QtWidgets.QWidget(Form)
-        self.widget_back_5.setGeometry(QtCore.QRect(490, 390, 171, 211))
+        self.widget_back_5.setGeometry(QtCore.QRect(590, 330, 171, 211))
         self.widget_back_5.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_5.setObjectName("widget_back_5")
         self.widget_back_6 = QtWidgets.QWidget(Form)
-        self.widget_back_6.setGeometry(QtCore.QRect(490, 610, 171, 211))
+        self.widget_back_6.setGeometry(QtCore.QRect(590, 550, 171, 211))
         self.widget_back_6.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_6.setObjectName("widget_back_6")
         self.widget_back_7 = QtWidgets.QWidget(Form)
-        self.widget_back_7.setGeometry(QtCore.QRect(980, 180, 191, 211))
+        self.widget_back_7.setGeometry(QtCore.QRect(1160, 200, 191, 211))
         self.widget_back_7.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_7.setObjectName("widget_back_7")
         self.widget_back_8 = QtWidgets.QWidget(Form)
-        self.widget_back_8.setGeometry(QtCore.QRect(1200, 180, 191, 211))
+        self.widget_back_8.setGeometry(QtCore.QRect(1380, 200, 191, 211))
         self.widget_back_8.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_8.setObjectName("widget_back_8")
         self.widget_back_9 = QtWidgets.QWidget(Form)
-        self.widget_back_9.setGeometry(QtCore.QRect(790, 340, 171, 211))
+        self.widget_back_9.setGeometry(QtCore.QRect(960, 360, 171, 211))
         self.widget_back_9.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_9.setObjectName("widget_back_9")
         self.widget_back_10 = QtWidgets.QWidget(Form)
-        self.widget_back_10.setGeometry(QtCore.QRect(790, 560, 171, 211))
+        self.widget_back_10.setGeometry(QtCore.QRect(960, 580, 171, 211))
         self.widget_back_10.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_10.setObjectName("widget_back_10")
         self.widget_back_11 = QtWidgets.QWidget(Form)
-        self.widget_back_11.setGeometry(QtCore.QRect(980, 620, 191, 211))
+        self.widget_back_11.setGeometry(QtCore.QRect(1170, 670, 191, 211))
         self.widget_back_11.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_11.setObjectName("widget_back_11")
         self.widget_back_12 = QtWidgets.QWidget(Form)
-        self.widget_back_12.setGeometry(QtCore.QRect(1210, 620, 191, 211))
+        self.widget_back_12.setGeometry(QtCore.QRect(1390, 670, 191, 211))
         self.widget_back_12.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_12.setObjectName("widget_back_12")
         self.widget_back_13 = QtWidgets.QWidget(Form)
-        self.widget_back_13.setGeometry(QtCore.QRect(150, 320, 141, 91))
+        self.widget_back_13.setGeometry(QtCore.QRect(240, 320, 91, 91))
         self.widget_back_13.setStyleSheet("border-radius: 20px;\n"
 "background-color: rgb(30, 30, 30);")
         self.widget_back_13.setObjectName("widget_back_13")
-        self.widget_back_13.raise_()
+        self.widget_3 = QtWidgets.QWidget(self.widget_back_13)
+        self.widget_3.setGeometry(QtCore.QRect(0, 10, 91, 71))
+        self.widget_3.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/unchecked-radio-button-off-96.png);")
+        self.widget_3.setObjectName("widget_3")
+        self.widget_back_14 = QtWidgets.QWidget(Form)
+        self.widget_back_14.setGeometry(QtCore.QRect(1070, 80, 91, 91))
+        self.widget_back_14.setStyleSheet("border-radius: 20px;\n"
+"background-color: rgb(30, 30, 30);")
+        self.widget_back_14.setObjectName("widget_back_14")
+        self.widget_16 = QtWidgets.QWidget(self.widget_back_14)
+        self.widget_16.setGeometry(QtCore.QRect(-10, 10, 111, 71))
+        self.widget_16.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/unchecked-radio-button-off-96.png);")
+        self.widget_16.setObjectName("widget_16")
+        self.widget_back_15 = QtWidgets.QWidget(Form)
+        self.widget_back_15.setGeometry(QtCore.QRect(1200, 80, 91, 91))
+        self.widget_back_15.setStyleSheet("border-radius: 20px;\n"
+"background-color: rgb(30, 30, 30);")
+        self.widget_back_15.setObjectName("widget_back_15")
+        self.widget_2 = QtWidgets.QWidget(self.widget_back_15)
+        self.widget_2.setGeometry(QtCore.QRect(-20, 10, 131, 71))
+        self.widget_2.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/unchecked-radio-button-off-96.png);")
+        self.widget_2.setObjectName("widget_2")
+        self.widget_back_16 = QtWidgets.QWidget(Form)
+        self.widget_back_16.setGeometry(QtCore.QRect(1330, 80, 91, 91))
+        self.widget_back_16.setStyleSheet("border-radius: 20px;\n"
+"background-color: rgb(30, 30, 30);")
+        self.widget_back_16.setObjectName("widget_back_16")
+        self.widget_1 = QtWidgets.QWidget(self.widget_back_16)
+        self.widget_1.setGeometry(QtCore.QRect(-20, 10, 131, 71))
+        self.widget_1.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/unchecked-radio-button-off-96.png);")
+        self.widget_1.setObjectName("widget_1")
+        self.widget_back_17 = QtWidgets.QWidget(Form)
+        self.widget_back_17.setGeometry(QtCore.QRect(1460, 80, 91, 91))
+        self.widget_back_17.setStyleSheet("border-radius: 20px;\n"
+"background-color: rgb(30, 30, 30);")
+        self.widget_back_17.setObjectName("widget_back_17")
+        self.widget_0 = QtWidgets.QWidget(self.widget_back_17)
+        self.widget_0.setGeometry(QtCore.QRect(-20, 10, 131, 71))
+        self.widget_0.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/unchecked-radio-button-off-96.png);")
+        self.widget_0.setObjectName("widget_0")
+        self.widget_back_18 = QtWidgets.QWidget(Form)
+        self.widget_back_18.setGeometry(QtCore.QRect(240, 80, 171, 221))
+        self.widget_back_18.setStyleSheet("border-radius: 20px;\n"
+"background-color: rgb(30, 30, 30);")
+        self.widget_back_18.setObjectName("widget_back_18")
+        self.widget_back_19 = QtWidgets.QWidget(Form)
+        self.widget_back_19.setGeometry(QtCore.QRect(460, 80, 171, 221))
+        self.widget_back_19.setStyleSheet("border-radius: 20px;\n"
+"background-color: rgb(30, 30, 30);")
+        self.widget_back_19.setObjectName("widget_back_19")
+        self.widget_back_20 = QtWidgets.QWidget(Form)
+        self.widget_back_20.setGeometry(QtCore.QRect(10, 650, 181, 211))
+        self.widget_back_20.setStyleSheet("border-radius: 20px;\n"
+"background-color: rgb(30, 30, 30);")
+        self.widget_back_20.setObjectName("widget_back_20")
+        self.widget_7 = QtWidgets.QWidget(self.widget_back_20)
+        self.widget_7.setGeometry(QtCore.QRect(10, 10, 151, 191))
+        self.widget_7.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/toggle-one.png);")
+        self.widget_7.setObjectName("widget_7")
+        self.widget_back_21 = QtWidgets.QWidget(Form)
+        self.widget_back_21.setGeometry(QtCore.QRect(420, 310, 131, 131))
+        self.widget_back_21.setStyleSheet("border-radius: 20px;\n"
+"background-color: rgb(30, 30, 30);")
+        self.widget_back_21.setObjectName("widget_back_21")
+        self.widget_15 = QtWidgets.QWidget(self.widget_back_21)
+        self.widget_15.setGeometry(QtCore.QRect(0, 10, 131, 111))
+        self.widget_15.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/toggle-one.png);")
+        self.widget_15.setObjectName("widget_15")
+        self.widget_back_22 = QtWidgets.QWidget(Form)
+        self.widget_back_22.setGeometry(QtCore.QRect(770, 470, 181, 171))
+        self.widget_back_22.setStyleSheet("border-radius: 20px;\n"
+"background-color: rgb(30, 30, 30);")
+        self.widget_back_22.setObjectName("widget_back_22")
+        self.widget_11 = QtWidgets.QWidget(self.widget_back_22)
+        self.widget_11.setGeometry(QtCore.QRect(20, 0, 141, 171))
+        self.widget_11.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/toggle-one.png);")
+        self.widget_11.setObjectName("widget_11")
+        self.widget_back_23 = QtWidgets.QWidget(Form)
+        self.widget_back_23.setGeometry(QtCore.QRect(10, 430, 181, 211))
+        self.widget_back_23.setStyleSheet("border-radius: 20px;\n"
+"background-color: rgb(30, 30, 30);")
+        self.widget_back_23.setObjectName("widget_back_23")
+        self.widget_5 = QtWidgets.QWidget(self.widget_back_23)
+        self.widget_5.setGeometry(QtCore.QRect(10, 10, 161, 191))
+        self.widget_5.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/toggle-one.png);")
+        self.widget_5.setObjectName("widget_5")
+        self.widget_back_24 = QtWidgets.QWidget(Form)
+        self.widget_back_24.setGeometry(QtCore.QRect(200, 430, 181, 211))
+        self.widget_back_24.setStyleSheet("border-radius: 20px;\n"
+"background-color: rgb(30, 30, 30);")
+        self.widget_back_24.setObjectName("widget_back_24")
+        self.widget_13 = QtWidgets.QWidget(self.widget_back_24)
+        self.widget_13.setGeometry(QtCore.QRect(10, 10, 161, 191))
+        self.widget_13.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/toggle-one.png);")
+        self.widget_13.setObjectName("widget_13")
+        self.widget_back_25 = QtWidgets.QWidget(Form)
+        self.widget_back_25.setGeometry(QtCore.QRect(200, 650, 181, 211))
+        self.widget_back_25.setStyleSheet("border-radius: 20px;\n"
+"background-color: rgb(30, 30, 30);")
+        self.widget_back_25.setObjectName("widget_back_25")
+        self.widget_9 = QtWidgets.QWidget(self.widget_back_25)
+        self.widget_9.setGeometry(QtCore.QRect(10, 10, 161, 191))
+        self.widget_9.setStyleSheet("border-radius: 10px;\n"
+"image: url(:/toggle-one.png);")
+        self.widget_9.setObjectName("widget_9")
+        self.widget_back_23.raise_()
+        self.widget_back_20.raise_()
+        self.widget_back_24.raise_()
+        self.widget_back_22.raise_()
+        self.widget_back_21.raise_()
+        self.widget_back_19.raise_()
+        self.widget_back_18.raise_()
         self.widget_back_2.raise_()
         self.widget_back_12.raise_()
         self.widget_back_11.raise_()
@@ -398,21 +449,6 @@ class Ui_Form(object):
         self.widget_back_3.raise_()
         self.widget_back_1.raise_()
         self.widget_back_0.raise_()
-        self.widget_0.raise_()
-        self.widget_1.raise_()
-        self.widget_2.raise_()
-        self.widget_3.raise_()
-        self.widget_4.raise_()
-        self.widget_5.raise_()
-        self.widget_7.raise_()
-        self.widget_8.raise_()
-        self.widget_9.raise_()
-        self.widget_10.raise_()
-        self.widget_11.raise_()
-        self.widget_12.raise_()
-        self.widget_13.raise_()
-        self.widget_14.raise_()
-        self.widget_15.raise_()
         self.lcdNumber_0.raise_()
         self.lcdNumber_1.raise_()
         self.lcdNumber_2.raise_()
@@ -428,12 +464,9 @@ class Ui_Form(object):
         self.lcdNumber_12.raise_()
         self.lcdNumber_13.raise_()
         self.lcdNumber_14.raise_()
-        self.widget_16.raise_()
-        self.widget_17.raise_()
         self.widget.raise_()
         self.lcdNumber_15.raise_()
         self.lcdNumber_16.raise_()
-        self.widget_6.raise_()
         self.widget_Dashboard_10.raise_()
         self.widget_Dashboard_7.raise_()
         self.widget_Dashboard_6.raise_()
@@ -450,6 +483,12 @@ class Ui_Form(object):
         self.comportbox.raise_()
         self.text.raise_()
         self.pushButton.raise_()
+        self.widget_back_13.raise_()
+        self.widget_back_14.raise_()
+        self.widget_back_15.raise_()
+        self.widget_back_16.raise_()
+        self.widget_back_17.raise_()
+        self.widget_back_25.raise_()
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -457,26 +496,21 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "DYU_test"))
-        self.widget_0.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_1.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_2.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_3.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_4.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_5.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_7.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_8.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_9.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_10.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_11.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_12.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_13.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_14.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_15.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_16.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_17.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
-        self.widget_6.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
         self.text.setText(_translate("Form", "Select COM to search :"))
         self.pushButton.setText(_translate("Form", "start"))
+        self.widget_17.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.widget_4.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.widget_3.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.widget_16.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.widget_2.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.widget_1.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.widget_0.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.widget_7.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.widget_15.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.widget_11.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.widget_5.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.widget_13.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.widget_9.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
 import icon
 
 
