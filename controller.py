@@ -1,4 +1,5 @@
 from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QMessageBox
 from UI import Ui_Form
 import serial 
 import threading
@@ -25,9 +26,13 @@ class MainWindow_controller(QtWidgets.QMainWindow):
     def find_port(self):
         COM_PORT = list(serial.tools.list_ports.comports())
         if(len(COM_PORT)<=0):
-            choices.append('NULL')
-            mbox = QtWidgets.QMessageBox(self)      
-            mbox.warning(self, '尚無連接通訊埠', '請確認有無正確連接通訊埠')  
+            choices.append('NULL')           
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Warning)
+            msg.setWindowTitle("發生錯誤")
+            msg.setText("請確認有無正確連接序列埠")
+            msg.setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(0, 0, 0)")
+            msg.exec_()  
             sys.exit(app.exec_())
         else :
             for i in range(0,len(COM_PORT)) :
@@ -37,8 +42,11 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         port_serial=self.ui.comportbox.currentText()
         serialport = serial.Serial(port_serial, BAUD_RATES, bytesize=8,parity='N',stopbits=1,timeout=0.1) 
         if self.check_port(serialport):
-            mbox = QtWidgets.QMessageBox(self)      
-            mbox.warning(self, '錯誤的通訊埠', '請選擇正確的序列埠') 
+            msg = QMessageBox(self)
+            msg.setWindowTitle("錯誤的通訊埠")
+            msg.setText("請選擇正確的序列埠")
+            msg.setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(0, 0, 0)")
+            msg.exec_()   
         else:
             self.refresh_data(serialport)
     def check_port(self,ser):
