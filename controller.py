@@ -8,7 +8,6 @@ import time,sys
 from read_data import  machine_7071Z,machine_7051
 import icon 
 import serial.tools.list_ports
-
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import pyqtSlot
 
@@ -21,8 +20,8 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         super().__init__() 
         self.ui = Ui_Form()
         self.ui.setupUi(self)         
-        self.find_port()
-        self.ui.pushButton.clicked.connect(self.Run)
+        self.find_port() #檢查有無插上usb，如果沒有會跳出視窗提示
+        self.ui.pushButton.clicked.connect(self.Run)#start按鈕，執行Run(self) function 
     def find_port(self):
         COM_PORT = list(serial.tools.list_ports.comports())
         if(len(COM_PORT)<=0):
@@ -49,6 +48,7 @@ class MainWindow_controller(QtWidgets.QMainWindow):
             msg.exec_()   
         else:
             self.refresh_data(serialport)
+    #檢查是否連接正確的comport
     def check_port(self,ser):
         ser.write(b'#01\r')
         list1 =ser.readline()                 
@@ -58,12 +58,14 @@ class MainWindow_controller(QtWidgets.QMainWindow):
             return 1
         else:
             return 0
+    #資料更新，每0.2秒(200毫秒)更新一次資料
     def refresh_data(self,arg):
         self.timer = QTimer(self)
         self.ui.comportbox.setDisabled(True)
         self.ui.pushButton.setDisabled(True)    
-        self.timer.timeout.connect(lambda:self.setup_control(arg))    
+        self.timer.timeout.connect(lambda:self.setup_control(arg)) #執行setup_control(self,ser) function 
         self.timer.start(200)
+    #下指令，讀取read_data.py檔，切割完後的資料
     def setup_control(self,ser):     
         try:             
             ser.write(b'#01\r')
@@ -78,7 +80,7 @@ class MainWindow_controller(QtWidgets.QMainWindow):
             ser.close() 
             self.timer.stop()   # 清除序列通訊物件
             print('再見！')
-
+#icon 更新
 def refresh_ui2(self,data2):
         if(data2[0]=='1') :
             self.ui.widget_0.setStyleSheet("border-radius: 10px;\n"
@@ -167,6 +169,7 @@ def refresh_ui2(self,data2):
         else : 
             self.ui.widget_15.setStyleSheet("border-radius: 10px;\n"
 "image: url(:/toggle-one.png);")
+#icon 更新
 def refresh_ui(self,data1):
         self.ui.lcdNumber_0.setDigitCount(7)
         self.ui.lcdNumber_0.display(data1[0])
