@@ -1,6 +1,7 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 from UI import Ui_Form
+from airplane_ui import Airplane_controller
 import serial 
 import threading
 from PyQt5.QtCore import  QTimer ,QDateTime
@@ -10,7 +11,7 @@ import icon
 import serial.tools.list_ports
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import pyqtSlot
-
+import sys
 
 BAUD_RATES = 9600 
 choices = []
@@ -19,9 +20,18 @@ class MainWindow_controller(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__() 
         self.ui = Ui_Form()
-        self.ui.setupUi(self)         
-        self.find_port() #檢查有無插上usb，如果沒有會跳出視窗提示
+        self.ui.setupUi(self) 
+        #self.find_port() #檢查有無插上usb，如果沒有會跳出視窗提示
         self.ui.pushButton.clicked.connect(self.Run)#start按鈕，執行Run(self) function 
+        self.ui.pushButton_view2.clicked.connect(self.Show_Airplane_Window)
+        
+    def Show_Airplane_Window(self):
+        self.ui = Airplane_controller()       # 連接新視窗
+        self.ui.show()
+        
+    def closeEvent(self,event):
+        sys.exit()
+
     def find_port(self):
         COM_PORT = list(serial.tools.list_ports.comports())
         if(len(COM_PORT)<=0):
@@ -64,6 +74,7 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         self.ui.comportbox.setDisabled(True)
         self.ui.pushButton.setDisabled(True)    
         self.timer.timeout.connect(lambda:self.setup_control(arg)) #執行setup_control(self,ser) function 
+        #self.timer.timeout.connect(lambda:Airplane_controller.init_vtk_view(arg))
         self.timer.start(200)
     #下指令，讀取read_data.py檔，切割完後的資料
     def setup_control(self,ser):     

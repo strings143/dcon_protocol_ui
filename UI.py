@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'dcon.ui'
+# Form implementation generated from reading ui file 'c:\Users\DYU\Desktop\dcon_view2\dcon_protocol_ui\dcon.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -19,8 +19,7 @@ class Ui_Form(object):
         Form.setMouseTracking(False)
         Form.setTabletTracking(False)
         Form.setAutoFillBackground(False)
-        self.centralwidget = QtWidgets.QWidget(Form)
-        Form.setWindowFlags(QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowCloseButtonHint | QtCore.Qt.WindowStaysOnTopHint)
+        Form.setWindowFlags(QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowCloseButtonHint)
         Form.setStyleSheet("background-color: rgb(0, 0, 0);\n"
 "")
         self.lcdNumber_0 = QtWidgets.QLCDNumber(Form)
@@ -199,7 +198,7 @@ class Ui_Form(object):
         self.widget_Dashboard_5.setStyleSheet("background-color: rgb(40, 38, 38);")
         self.widget_Dashboard_5.setObjectName("widget_Dashboard_5")
         self.comportbox = QtWidgets.QComboBox(Form)
-        self.comportbox.setGeometry(QtCore.QRect(390, 30, 111, 31))  
+        self.comportbox.setGeometry(QtCore.QRect(390, 30, 111, 31))
         font = QtGui.QFont()
         font.setFamily("Arial Black")
         font.setPointSize(12)
@@ -429,6 +428,17 @@ class Ui_Form(object):
         self.widget_9.setStyleSheet("border-radius: 10px;\n"
 "image: url(:/toggle-one.png);")
         self.widget_9.setObjectName("widget_9")
+        self.pushButton_view2 = QtWidgets.QPushButton(Form)
+        self.pushButton_view2.setGeometry(QtCore.QRect(600, 30, 61, 31))
+        font = QtGui.QFont()
+        font.setFamily("Arial Black")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_view2.setFont(font)
+        self.pushButton_view2.setStyleSheet("background-color: rgb(206, 221, 255);\n"
+"")
+        self.pushButton_view2.setObjectName("pushButton_view2")
         self.widget_back_23.raise_()
         self.widget_back_20.raise_()
         self.widget_back_24.raise_()
@@ -489,6 +499,7 @@ class Ui_Form(object):
         self.widget_back_16.raise_()
         self.widget_back_17.raise_()
         self.widget_back_25.raise_()
+        self.pushButton_view2.raise_()
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -511,14 +522,5 @@ class Ui_Form(object):
         self.widget_5.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
         self.widget_13.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
         self.widget_9.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>"))
+        self.pushButton_view2.setText(_translate("Form", "Open"))
 import icon
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())
