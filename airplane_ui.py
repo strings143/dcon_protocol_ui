@@ -17,7 +17,7 @@ class Airplane_controller(QtWidgets.QMainWindow):
         self.ui = Airplane_Ui_Form()
         self.ui.setupUi(self) 
         self.model = vtk.vtkPolyDataReader()
-        self.model.SetFileName("A.vtk")
+        self.model.SetFileName("water.vtk")
         self.model.Update()
         self.init_vtk_view(self)
     def Position(self):
@@ -50,7 +50,7 @@ class Airplane_controller(QtWidgets.QMainWindow):
 
         self.actor = vtk.vtkActor()
         self.actor.SetMapper(self.mapper)
-        # self.actor.GetProperty().SetColor(0.5, 0.5, 0.5)
+        self.actor.GetProperty().SetColor(1, 1, 0.6)
 
         #-----角度-------
         #self.transform = vtk.vtkTransform()
@@ -73,13 +73,13 @@ class Airplane_controller(QtWidgets.QMainWindow):
         self.ren.ResetCamera()
         self.container.setLayout(self.vl)
         self.setCentralWidget(self.container)
-        self.timer = QTimer(self)
-        self.timer.timeout.connect(lambda:self.Position())
-        self.timer.start(200)
+        # self.timer = QTimer(self)
+        # self.timer.timeout.connect(lambda:self.Position())
+        # self.timer.start(200)
 
         self.iren.Start()
     def closeEvent(self, QCloseEvent): #關閉視窗，沒有加無法重複關閉開啟
-        self.timer.stop()
+        #self.timer.stop()
         super().closeEvent(QCloseEvent)
         self.vtkWidget.Finalize()     
 
