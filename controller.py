@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 from UI import Ui_Form
-from airplane_ui import Airplane_controller
+from auv_view import Airplane_controller
 import serial 
 import threading
 from PyQt5.QtCore import  QTimer ,QDateTime

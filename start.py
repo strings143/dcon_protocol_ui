@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 from controller import MainWindow_controller
-from airplane_ui import Airplane_controller
+from auv_view import Airplane_controller
 
 
 if __name__ == '__main__':
