@@ -26,8 +26,8 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         self.ui.pushButton_view2.clicked.connect(self.Show_Airplane_Window)
         
     def Show_Airplane_Window(self):
-        self.ui = Airplane_controller()       # 連接新視窗
-        self.ui.show()
+        self.Airplane_ui = Airplane_controller()       # 連接新視窗
+        self.Airplane_ui.show()
         
     def closeEvent(self,event):
         sys.exit()
