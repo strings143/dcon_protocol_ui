@@ -5,10 +5,10 @@ from PyQt5.QtWidgets import QMessageBox,QListView
 import vtkmodules.all as vtk,time
 from vtkmodules.qt.QVTKRenderWindowInteractor import QVTKRenderWindowInteractor
         
-class Airplane_controller(QtWidgets.QMainWindow):
+class RemoteOperatedVehicle_controller(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__() 
-        self.ui = Airplane_Ui_Form()
+        self.ui = RemoteOperatedVehicle_Ui_Form()
         self.ui.setupUi(self) 
 
         self.chioces=[]
@@ -17,7 +17,7 @@ class Airplane_controller(QtWidgets.QMainWindow):
         self.ui.start.clicked.connect(self.Run)#start按鈕，執行Run(self) function 
 
         self.model = vtk.vtkPolyDataReader()
-        self.model.SetFileName("AUV_3D.vtk")
+        self.model.SetFileName("ROV_3D.vtk")
         self.model.Update()
 
         self.First_Run=True
@@ -151,7 +151,7 @@ class Airplane_controller(QtWidgets.QMainWindow):
         super().closeEvent(QCloseEvent)
         self.vtkWidget.Finalize()     
     
-class Airplane_Ui_Form(object):
+class RemoteOperatedVehicle_Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(927, 730)
@@ -231,14 +231,14 @@ class Airplane_Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Airplane"))
+        Form.setWindowTitle(_translate("Form", "RemoteOperatedVehicle"))
         self.start.setText(_translate("Form", "start"))
         self.label.setText(_translate("Form", "Select COM to search :"))
 
 if __name__ == '__main__':
     import sys
     app = QtWidgets.QApplication(sys.argv)   
-    window2 = Airplane_controller()       # 連接新視窗
+    window2 = RemoteOperatedVehicle_controller()       # 連接新視窗
     window2.show()
     sys.exit(app.exec_())
     

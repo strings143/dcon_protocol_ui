@@ -22,7 +22,7 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         self.ui.pushButton.clicked.connect(self.Run)#start按鈕，執行Run(self) function 
         self.ui.pushButton_view2.clicked.connect(self.Show_Airplane_Window)
     def Show_Airplane_Window(self):
-        subprocess.Popen('Auv.exe')
+        subprocess.Popen('Rov.exe')
     def closeEvent(self,event):
         sys.exit()
 
