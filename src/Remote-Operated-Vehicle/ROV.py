@@ -147,7 +147,6 @@ class RemoteOperatedVehicle_controller(QtWidgets.QMainWindow):
         except Exception as e:
             print("發生錯誤:", e)
     def closeEvent(self, QCloseEvent): #關閉視窗，沒有加無法重複關閉開啟
-        self.timer.stop()
         super().closeEvent(QCloseEvent)
         self.vtkWidget.Finalize()     
     
