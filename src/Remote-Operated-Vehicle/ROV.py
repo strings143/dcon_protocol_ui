@@ -5,6 +5,25 @@ from PyQt5.QtWidgets import QMessageBox,QListView
 import vtkmodules.all as vtk,time
 from vtkmodules.qt.QVTKRenderWindowInteractor import QVTKRenderWindowInteractor
         
+class  MouseInteractorHighLightActor(vtk.vtkInteractorStyleTrackballCamera): # 禁止3D vtk與滑鼠交互事件
+    def __init__(self, parent = None):
+               
+        self.AddObserver("MouseMoveEvent", self.MouseMoveEvent)
+       
+        self.AddObserver("MouseWheelForwardEvent", self.MouseWheelForwardEvent)
+      
+        self.AddObserver("MouseWheelBackwardEvent", self.MouseWheelBackwardEvent)
+
+    def MouseMoveEvent(self, obj, event):
+        pass
+
+    def MouseWheelBackwardEvent(self, obj, event):
+        pass
+
+    def MouseWheelForwardEvent(self, obj, event):
+        pass
+
+
 class RemoteOperatedVehicle_controller(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__() 
@@ -78,9 +97,13 @@ class RemoteOperatedVehicle_controller(QtWidgets.QMainWindow):
         self.ren.SetBackground(0.1, 0.3, 0.5)
         #self.render_window.SetSize(800, 800)
         self.render_window.AddRenderer(self.ren)
-       
         
         self.iren = self.vtkWidget.GetRenderWindow().GetInteractor()
+
+        # add the custom style
+        style = MouseInteractorHighLightActor()
+        style.SetDefaultRenderer(self.ren)
+        self.iren.SetInteractorStyle(style)
 
         self.mapper = vtk.vtkPolyDataMapper()
         self.mapper.SetInputConnection(self.model.GetOutputPort())
@@ -121,22 +144,32 @@ class RemoteOperatedVehicle_controller(QtWidgets.QMainWindow):
             #---------------------------待補try catch----------------------------------
             if(len(data)==51): #因資料有時候會缺失，導致錯誤，因此收到完整資料(51)才能進行作業
                 # #sensor_id = parts[0]  # "Sensor"
-                value1 = float(parts[1])*10  # 0000.31 - 深度
-                value2 = float(parts[2])  # 290.16  - y軸
-                value3 = float(parts[3])  # 006.31  - x軸
-                value4 = float(parts[4])  # 00.61   - z軸
+                value1 = float(parts[1])*10  # - 深度  # *10為Demo方便觀測progressBar物件
+                value2 = float(parts[2])  #  - y軸
+                value3 = float(parts[3])  #  - x軸
+                value4 = float(parts[4])  #  - z軸
                 # #value5 = float(parts[5])  # -00.1
                 # #checksum = parts[6]  # "*09"
-
                 self.ui.progressBar.setValue(value1)
                 self.ui.lcdNumber.setDigitCount(7)
                 self.ui.lcdNumber.display(value1)
                 
                 if(self.First_Run):
-                    self.First_Run=False
+                    self.First_Run=False #只執行第一次
+                    
+                    # 輸出初始角度
+                    # print("X軸旋轉:",value3)
+                    # print("Y軸旋轉:",value2)
+                    # print("Z軸旋轉:",value4)
+
+                    #Demo時初始角度為(-4,316,2)，初始角度減去value即可校正模型角度
+                    self.actor.RotateX(-4-value3)
+                    self.actor.RotateY(316-value2)
+                    self.actor.RotateZ(2-value4)
+                    self.iren.Render()
                 else:
-                    self.actor.RotateY(y-value2)
                     self.actor.RotateX(x-value3)
+                    self.actor.RotateY(y-value2)
                     self.actor.RotateZ(z-value4)
                     self.iren.Render()
 
@@ -147,7 +180,6 @@ class RemoteOperatedVehicle_controller(QtWidgets.QMainWindow):
         except Exception as e:
             print("發生錯誤:", e)
     def closeEvent(self, QCloseEvent): #關閉視窗，沒有加無法重複關閉開啟
-        self.timer.stop()
         super().closeEvent(QCloseEvent)
         self.vtkWidget.Finalize()     
     
@@ -204,6 +236,7 @@ class RemoteOperatedVehicle_Ui_Form(object):
         self.progressBar = QtWidgets.QProgressBar(Form)
         self.progressBar.setGeometry(QtCore.QRect(760, 130, 91, 571))
         self.progressBar.setLayoutDirection(QtCore.Qt.LeftToRight)
+        #測試用為0~10方便觀測，實際應改為0~1000
         self.progressBar.setRange(0, 10)
         self.progressBar.setProperty("value", 0)
         self.progressBar.setStyleSheet('''
