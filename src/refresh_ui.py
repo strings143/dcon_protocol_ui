@@ -1,88 +1,3 @@
-<<<<<<< HEAD:controller.py
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QMessageBox
-from UI import Ui_Form
-import serial 
-import threading
-from PyQt5.QtCore import  QTimer ,QDateTime
-import time,sys
-from read_data import  machine_7071Z,machine_7051
-import icon 
-import serial.tools.list_ports
-from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import pyqtSlot
-
-
-BAUD_RATES = 9600 
-choices = []
-
-class MainWindow_controller(QtWidgets.QMainWindow):
-    def __init__(self):
-        super().__init__() 
-        self.ui = Ui_Form()
-        self.ui.setupUi(self)         
-        self.find_port() #檢查有無插上usb，如果沒有會跳出視窗提示
-        self.ui.pushButton.clicked.connect(self.Run)#start按鈕，執行Run(self) function 
-    def find_port(self):
-        COM_PORT = list(serial.tools.list_ports.comports())
-        if(len(COM_PORT)<=0):
-            choices.append('NULL')           
-            msg = QMessageBox()
-            msg.setIcon(QMessageBox.Warning)
-            msg.setWindowTitle("發生錯誤")
-            msg.setText("請確認有無正確連接序列埠")
-            msg.setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(0, 0, 0)")
-            msg.exec_()  
-            sys.exit(app.exec_())
-        else :
-            for i in range(0,len(COM_PORT)) :
-                choices.append(COM_PORT[i][0])
-        self.ui.comportbox.addItems(choices)
-    def Run(self):
-        port_serial=self.ui.comportbox.currentText()
-        serialport = serial.Serial(port_serial, BAUD_RATES, bytesize=8,parity='N',stopbits=1,timeout=0.1) 
-        if self.check_port(serialport):
-            msg = QMessageBox(self)
-            msg.setWindowTitle("錯誤的通訊埠")
-            msg.setText("請選擇正確的序列埠")
-            msg.setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(0, 0, 0)")
-            msg.exec_()   
-        else:
-            self.refresh_data(serialport)
-    #檢查是否連接正確的comport
-    def check_port(self,ser):
-        ser.write(b'#01\r')
-        list1 =ser.readline()                 
-        ser.write(b'@02\r')
-        list2 =ser.readline()
-        if len(list1)==0 or len(list2)==0:
-            return 1
-        else:
-            return 0
-    #資料更新，每0.2秒(200毫秒)更新一次資料
-    def refresh_data(self,arg):
-        self.timer = QTimer(self)
-        self.ui.comportbox.setDisabled(True)
-        self.ui.pushButton.setDisabled(True)    
-        self.timer.timeout.connect(lambda:self.setup_control(arg)) #執行setup_control(self,ser) function 
-        self.timer.start(200)
-    #下指令，讀取read_data.py檔，切割完後的資料
-    def setup_control(self,ser):     
-        try:             
-            ser.write(b'#01\r')
-            list1 =ser.readline()                 
-            ser.write(b'@02\r')
-            list2 =ser.readline()
-            data1=machine_7071Z(list1)
-            data2=machine_7051(list2)
-            refresh_ui(self,data1)
-            refresh_ui2(self,data2)               
-        except KeyboardInterrupt:
-            ser.close() 
-            self.timer.stop()   # 清除序列通訊物件
-            print('再見！')
-=======
->>>>>>> origin/develop:src/refresh_ui.py
 #icon 更新
 def refresh_ui2(self,data2):
         if(data2[0]=='1') :
@@ -173,11 +88,7 @@ def refresh_ui2(self,data2):
             self.ui.widget_15.setStyleSheet("border-radius: 10px;\n"
 "image: url(:/toggle-one.png);")
 #icon 更新
-<<<<<<< HEAD:controller.py
-def refresh_ui(self,data1):
-=======
 def refresh_ui1(self,data1):
->>>>>>> origin/develop:src/refresh_ui.py
         self.ui.lcdNumber_0.setDigitCount(7)
         self.ui.lcdNumber_0.display(data1[0])
         self.ui.lcdNumber_1.setDigitCount(7)
