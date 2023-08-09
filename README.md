@@ -12,3 +12,6 @@
 * PyQt5 5.15.4
 * PyQt5-tools 5.15.4.3.2 
 * vtk 9.2.6
+# References
+參考了作者的儀錶板設計。
+> https://github.com/KhamisiKibet/QT-PyQt-PySide-Custom-Widgets/tree/main
