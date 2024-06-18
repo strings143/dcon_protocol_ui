@@ -3,13 +3,13 @@
 ## 搖桿模組
 將控制板上資料透過M-7051與M-7017Z傳送，透過DCON通訊協定進行資料傳送，資料到手後會有四組16進制格式的資料，需要將其轉為2進制格式即可判斷1/0來更改圖形介面。例如:7fff轉為二進制為0111 1111 1111 1111我們就可以知道Address[0]是關閉的。
 ![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/08779024-2dc1-4a1a-a5e5-e94ecb139e9b)
+![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/d42c101b-77f4-4cfe-a9ea-999138bffe39)
 ## 方位感測器
 感測器偵測自組遙控載具當前X,Y,Z軸，讀取到後即可已將資料串接給3D模型，就可以達到使用3D模型即時模擬自組遙控載具現在之方位
 ![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/562df74b-cade-4533-81e6-6154ee1996d8)
 # 預覽畫面
 ## 操作搖桿模組介面
 ![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/9f1a73d1-9d07-4323-803e-51a494eebad1)
-![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/d42c101b-77f4-4cfe-a9ea-999138bffe39)
 ## 方位感測器介面
 ![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/30ee2c17-2325-43ba-9b87-061b21c982d5)
 # 建置
