@@ -1,5 +1,11 @@
 # Dcon_Protocol_UI
-本系統的控制器主要是採用 Dcon 通信協定，將控制器傳送的資料，透過UI介面即時更新顯示，並且將 Miniature Inertial Sensors 接收到的資料，透過UI介面的Remotely operated underwater vehicle的3D圖，達到即時更新轉動的效果。
+本專案使用現有自組遙控載具(Remote operated vehicle, ROV)開發遠端操作搖桿模組的開發項目，包含搖桿操作資料讀取、人機介面(User interface, UI)及推進馬達(Thruster)操控。因應玉豐海科任務需求，本計畫規劃運用Python程式開發設計具有高可靠度的ROV操作搖桿模組及其UI，包括使用3D模型模擬水下載具，爾後用來線上遠端操控各式水下ROV載具。
+## 搖桿模組
+將控制板上資料透過M-7051與M-7017Z傳送，透過DCON通訊協定進行資料傳送，資料到手後會有四組16進制格式的資料，需要將其轉為2進制格式即可判斷1/0來更改圖形介面。例如:7fff轉為二進制為0111 1111 1111 1111我們就可以知道Address[0]是關閉的。
+![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/08779024-2dc1-4a1a-a5e5-e94ecb139e9b)
+## 方位感測器
+感測器偵測自組遙控載具當前X,Y,Z軸，讀取到後即可已將資料串接給3D模型，就可以達到使用3D模型即時模擬自組遙控載具現在之方位
+![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/562df74b-cade-4533-81e6-6154ee1996d8)
 # Demo
 ![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/9f1a73d1-9d07-4323-803e-51a494eebad1)
 ![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/30ee2c17-2325-43ba-9b87-061b21c982d5)
