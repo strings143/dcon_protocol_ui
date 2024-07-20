@@ -11,7 +11,7 @@
 ### 操作搖桿模組介面
 ![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/9f1a73d1-9d07-4323-803e-51a494eebad1)
 ### 方位感測器介面
-![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/30ee2c17-2325-43ba-9b87-061b21c982d5)
+![image](https://github.com/user-attachments/assets/725af8a6-c8df-4388-b0f9-1546549c44c4)
 # 建置
 * download repository 
 * open dist file
