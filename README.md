@@ -6,12 +6,12 @@
 ![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/d42c101b-77f4-4cfe-a9ea-999138bffe39)
 ### 方位感測器
 感測器偵測自組遙控載具當前X,Y,Z軸，讀取到後即可已將資料串接給3D模型，就可以達到使用3D模型即時模擬自組遙控載具現在之方位
-![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/562df74b-cade-4533-81e6-6154ee1996d8)
+![image](https://github.com/user-attachments/assets/842585ea-7d83-452f-9ced-78ac52b7f0ef)
 # 預覽畫面
 ### 操作搖桿模組介面
 ![image](https://github.com/strings143/dcon_protocol_ui/assets/73727207/9f1a73d1-9d07-4323-803e-51a494eebad1)
 ### 方位感測器介面
-![image](https://github.com/user-attachments/assets/725af8a6-c8df-4388-b0f9-1546549c44c4)
+![image](https://github.com/user-attachments/assets/5325cfc6-c897-46c8-9995-0a896b840001)
 # 建置
 * download repository 
 * open dist file
